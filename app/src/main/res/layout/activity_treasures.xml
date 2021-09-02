@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_1">
+
+    <ImageView
+        android:id="@+id/treasure_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/treasure_result"
+        app:layout_constraintEnd_toStartOf="@+id/button_back"
+        app:layout_constraintStart_toStartOf="@+id/treasure_picture">
+
+        <ImageButton
+            android:id="@+id/ib_treasure1"
+            android:onClick="onClickTreasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treasure"
+            android:layout_marginEnd="20dp"
+            android:background="@null"/>
+        <ImageButton
+            android:id="@+id/ib_treasure2"
+            android:onClick="onClickTreasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treasure"
+            android:layout_marginEnd="20dp"
+            android:background="@null"/>
+        <ImageButton
+            android:id="@+id/ib_treasure3"
+            android:onClick="onClickTreasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treasure"
+            android:layout_marginEnd="20dp"
+            android:background="@null"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/treasure_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="Выберите сундук"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_back"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_pirates"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:text="Назад"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
